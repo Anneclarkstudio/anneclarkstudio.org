@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anne Clark Studio — Fine Art & Photography · Kansas City</title>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,300;0,6..96,400;0,6..96,700;1,6..96,300;1,6..96,400;1,6..96,700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Great+Vibes&family=Outfit:wght@200;300;400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --cream:       #F8F3ED;
+    --warm-white:  #FDFAF6;
+    --ink:         #1E2A24;
+    --sage:        #9DBFAA;
+    --sage-deep:   #5A8F73;
+    --gold:        #C9A96E;
+    --taupe:       #B8A898;
+    --taupe-light: #E2D9D0;
+    --light-pink:  #F2C4C4;
+    --petal:       #EBA8A8;
+    --blush-soft:  #F7DADA;
+    --rose-mid:    #D4878B;
+    --navy:        #3D5C6E;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--warm-white);
+    color: var(--ink);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* ══════════════════════════════════════
+     NAV
+  ══════════════════════════════════════ */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 52px;
+    background: rgba(253,250,246,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(184,168,152,0.18);
+    transition: all 0.4s ease;
+  }
+
+  /* Logo mark in nav */
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+  }
+
+  .nav-logo-circle {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 3px 12px rgba(30,42,36,0.14);
+    flex-shrink: 0;
+  }
+
+  .nav-logo-left {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #F2C4C4 0%, #EBA8A8 55%, #D4878B 100%);
+  }
+
+  .nav-logo-right { display: none; }
+
+  .nav-logo-text-wrap {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    gap: 0;
+  }
+
+  .nav-logo-acs {
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    font-weight: 900;
+    font-style: italic;
+    color: #1E2A24;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    position: relative;
+  }
+
+  .nav-logo-anne {
+    font-family: 'Playfair Display', serif;
+    font-size: 10px;
+    font-weight: 900;
+    font-style: italic;
+    color: #1E2A24;
+    line-height: 1;
+  }
+
+  .nav-logo-clark {
+    font-family: 'Playfair Display', serif;
+    font-size: 10px;
+    font-weight: 900;
+    font-style: italic;
+    color: #1E2A24;
+    line-height: 1;
+    margin-top: -1px;
+  }
+
+  .nav-logo-studio {
+    font-family: 'Great Vibes', cursive;
+    font-size: 10px;
+    color: rgba(30,42,36,0.6);
+    line-height: 1;
+    margin-top: 1px;
+  }
+
+  .nav-logo-acs .base { display: none; }
+  .nav-logo-acs .overlay { display: none; }
+
+  .nav-dot-rose {
+    position: absolute;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--petal), var(--rose-mid));
+    top: -1px; right: -1px;
+    box-shadow: 0 2px 6px rgba(235,168,168,0.55), 0 0 0 1.5px rgba(255,255,255,0.6);
+    z-index: 3;
+  }
+
+  .nav-brand-name {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 38px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 200;
+    font-size: 11px;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--taupe);
+    text-decoration: none;
+    transition: color 0.3s;
+    position: relative;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; left: 0;
+    width: 0; height: 1px;
+    background: linear-gradient(90deg, var(--rose-mid), var(--gold));
+    transition: width 0.35s ease;
+  }
+
+  .nav-links a:hover { color: var(--ink); }
+  .nav-links a:hover::after { width: 100%; }
+
+  .nav-cta {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--warm-white);
+    background: var(--ink);
+    padding: 11px 26px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 1px solid var(--ink);
+  }
+
+  .nav-cta:hover {
+    background: transparent;
+    color: var(--ink);
+  }
+
+  /* ══════════════════════════════════════
+     HERO
+  ══════════════════════════════════════ */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 82px;
+    overflow: hidden;
+  }
+
+  .hero-left {
+    background: linear-gradient(160deg, var(--blush-soft) 0%, var(--light-pink) 50%, var(--petal) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 80px 60px 80px 72px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Background ACS watermark */
+  .hero-left::before {
+    content: 'ACS';
+    position: absolute;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 320px;
+    font-weight: 700;
+    font-style: italic;
+    color: rgba(255,255,255,0.18);
+    bottom: -40px;
+    right: -30px;
+    line-height: 1;
+    pointer-events: none;
+    letter-spacing: -0.04em;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--rose-mid);
+    margin-bottom: 24px;
+    animation: fadeUp 1s ease both;
+    animation-delay: 0.2s;
+  }
+
+  .hero-title {
+    font-family: 'Bodoni Moda', serif;
+    font-size: clamp(52px, 6vw, 80px);
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.05;
+    color: var(--ink);
+    margin-bottom: 28px;
+    animation: fadeUp 1s ease both;
+    animation-delay: 0.35s;
+  }
+
+  .hero-title span { color: var(--sage-deep); }
+
+  .hero-body {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 1.85;
+    color: rgba(30,42,36,0.65);
+    max-width: 380px;
+    margin-bottom: 44px;
+    animation: fadeUp 1s ease both;
+    animation-delay: 0.5s;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    animation: fadeUp 1s ease both;
+    animation-delay: 0.65s;
+  }
+
+  .btn-primary {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--warm-white);
+    background: var(--ink);
+    padding: 15px 36px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 1.5px solid var(--ink);
+  }
+
+  .btn-primary:hover {
+    background: var(--rose-mid);
+    border-color: var(--rose-mid);
+  }
+
+  .btn-secondary {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: transparent;
+    padding: 15px 36px;
+    text-decoration: none;
+    border: 1.5px solid rgba(30,42,36,0.3);
+    transition: all 0.3s;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--ink);
+    background: rgba(30,42,36,0.05);
+  }
+
+  /* Hero right — mosaic image grid */
+  .hero-right {
+    background: var(--ink);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-img-block {
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1.2s ease both;
+  }
+
+  .hero-img-block:nth-child(1) { animation-delay: 0.3s; }
+  .hero-img-block:nth-child(2) { animation-delay: 0.45s; }
+  .hero-img-block:nth-child(3) { animation-delay: 0.6s; }
+  .hero-img-block:nth-child(4) { animation-delay: 0.75s; }
+
+  /* Placeholder image blocks with art-style gradients */
+  .hero-img-block:nth-child(1) {
+    background: url("data:image/jpeg;base64,") center/cover no-repeat;
+  }
+  .hero-img-block:nth-child(2) {
+    background: url("data:image/jpeg;base64,") center/cover no-repeat;
+  }
+  .hero-img-block:nth-child(3) {
+    background: url("data:image/jpeg;base64,") center/cover no-repeat;
+  }
+  .hero-img-block:nth-child(4) {
+    background: url("data:image/jpeg;base64,") center/cover no-repeat;
+  }
+
+  .img-label {
+    position: absolute;
+    bottom: 16px; left: 16px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 200;
+    font-size: 9px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    background: rgba(30,42,36,0.35);
+    padding: 5px 10px;
+    backdrop-filter: blur(4px);
+  }
+
+  .hero-img-block:hover .img-label { color: rgba(255,255,255,1); }
+
+  /* Gold accent corner on hero */
+  .hero-gold-bar {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--light-pink), var(--gold), var(--sage));
+    z-index: 5;
+  }
+
+  /* ══════════════════════════════════════
+     MARQUEE STRIP
+  ══════════════════════════════════════ */
+  .marquee-strip {
+    background: var(--ink);
+    padding: 16px 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .marquee-track {
+    display: inline-flex;
+    gap: 0;
+    animation: marquee 22s linear infinite;
+  }
+
+  .marquee-item {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: rgba(248,243,237,0.5);
+    padding: 0 32px;
+  }
+
+  .marquee-item span {
+    color: var(--light-pink);
+    font-style: normal;
+    font-size: 8px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    vertical-align: middle;
+    margin: 0 18px;
+  }
+
+  /* ══════════════════════════════════════
+     SECTION COMMONS
+  ══════════════════════════════════════ */
+  section { padding: 100px 72px; }
+
+  .section-eyebrow {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--rose-mid);
+    margin-bottom: 18px;
+  }
+
+  .section-title {
+    font-family: 'Bodoni Moda', serif;
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+
+  .section-title span { color: var(--sage-deep); }
+
+  .section-body {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 1.9;
+    color: rgba(30,42,36,0.6);
+    max-width: 540px;
+  }
+
+  .gold-rule {
+    width: 50px;
+    height: 1.5px;
+    background: linear-gradient(90deg, var(--rose-mid), var(--gold));
+    margin-bottom: 28px;
+    border-radius: 2px;
+  }
+
+  /* ══════════════════════════════════════
+     SHOP / PRINTS SECTION
+  ══════════════════════════════════════ */
+  .shop-section {
+    background: var(--warm-white);
+  }
+
+  .shop-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 56px;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .shop-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .print-card {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    group: true;
+  }
+
+  .print-img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Art print placeholder gradients */
+  .print-img.p1 { background: url("data:image/jpeg;base64,") center/cover no-repeat; }
+  .print-img.p2 { background: url("data:image/jpeg;base64,") center/cover no-repeat; }
+  .print-img.p3 { background: url("data:image/jpeg;base64,") center/cover no-repeat; }
+  .print-img.p4 { background: url("data:image/jpeg;base64,") center/cover no-repeat; }
+  .print-img.p5 { background: url("data:image/jpeg;base64,") center/cover no-repeat; }
+  .print-img.p6 { background: url("data:image/jpeg;base64,") center/cover no-repeat; }
+
+  .print-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(30,42,36,0.55) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .print-card:hover .print-img::after { opacity: 1; }
+
+  .print-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 24px 20px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 2;
+  }
+
+  .print-card:hover .print-overlay {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .print-overlay-btn {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--warm-white);
+    background: rgba(30,42,36,0.7);
+    padding: 10px 20px;
+    display: inline-block;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  /* Pink top border pop */
+  .print-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--light-pink), var(--gold));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+    z-index: 3;
+    transform-origin: left;
+  }
+
+  .print-card:hover::before { transform: scaleX(1); }
+
+  .print-info {
+    padding: 16px 4px 4px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .print-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--ink);
+  }
+
+  .print-type {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--taupe);
+    margin-top: 4px;
+  }
+
+  .print-price {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--sage-deep);
+    white-space: nowrap;
+  }
+
+  /* ══════════════════════════════════════
+     ABOUT SECTION
+  ══════════════════════════════════════ */
+  .about-section {
+    background: var(--ink);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .about-img-side {
+    position: relative;
+    min-height: 600px;
+    background: url("data:image/jpeg;base64,") center/cover no-repeat;
+    overflow: hidden;
+  }
+
+  /* Big ACS in background */
+  .about-img-side::before {
+    content: 'Anne';
+    font-family: 'Bodoni Moda', serif;
+    font-size: 200px;
+    font-weight: 700;
+    font-style: italic;
+    color: rgba(255,255,255,0.08);
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .about-img-tag {
+    position: absolute;
+    bottom: 40px; right: 40px;
+    background: var(--light-pink);
+    padding: 16px 22px;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 13px;
+    font-style: italic;
+    color: var(--ink);
+    letter-spacing: 0.1em;
+  }
+
+  .about-content {
+    padding: 90px 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .about-content .section-eyebrow { color: var(--petal); }
+  .about-content .section-title { color: var(--cream); }
+  .about-content .section-title span { color: var(--light-pink); }
+  .about-content .section-body { color: rgba(248,243,237,0.6); }
+
+  .about-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .stat-num {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 36px;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--light-pink);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: rgba(248,243,237,0.45);
+  }
+
+  /* ══════════════════════════════════════
+     FAMILY PORTRAITS SECTION
+  ══════════════════════════════════════ */
+  .portraits-section {
+    background: var(--cream);
+  }
+
+  .portraits-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 52px;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .portraits-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 16px;
+  }
+
+  .portrait-block {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .portrait-block:first-child {
+    grid-row: 1 / 3;
+  }
+
+  .portrait-img {
+    width: 100%;
+    height: 100%;
+    min-height: 240px;
+    position: relative;
+    transition: transform 0.6s ease;
+  }
+
+  .portrait-block:hover .portrait-img { transform: scale(1.04); }
+
+  .portrait-img.f1 { background: url("data:image/jpeg;base64,") center top/cover no-repeat; min-height: 500px; }
+  .portrait-img.f2 { background: url("data:image/jpeg;base64,") center/cover no-repeat; }
+  .portrait-img.f3 { background: url("data:image/jpeg;base64,") center/cover no-repeat; }
+  .portrait-img.f4 { background: url("data:image/jpeg;base64,") center/cover no-repeat; }
+  .portrait-img.f5 { background: url("data:image/jpeg;base64,") center/cover no-repeat; }
+
+  /* Pink strip on hover */
+  .portrait-block::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--light-pink), var(--gold));
+    transform: scaleX(0);
+    transition: transform 0.4s;
+    transform-origin: left;
+  }
+
+  .portrait-block:hover::after { transform: scaleX(1); }
+
+  .portraits-cta {
+    margin-top: 48px;
+    padding: 36px 44px;
+    background: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .portraits-cta-text {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--cream);
+  }
+
+  .portraits-cta-sub {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: rgba(248,243,237,0.5);
+    margin-top: 6px;
+  }
+
+  /* ══════════════════════════════════════
+     INSTAGRAM / SOCIAL STRIP
+  ══════════════════════════════════════ */
+  .social-section {
+    background: var(--warm-white);
+    padding: 80px 72px;
+    text-align: center;
+  }
+
+  .social-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 48px;
+  }
+
+  .social-block {
+    aspect-ratio: 1;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .social-block:nth-child(1) { background: url("data:image/jpeg;base64,") center/cover no-repeat; }
+  .social-block:nth-child(2) { background: url("data:image/jpeg;base64,") center/cover no-repeat; }
+  .social-block:nth-child(3) { background: url("data:image/jpeg;base64,") center/cover no-repeat; }
+  .social-block:nth-child(4) { background: url("data:image/jpeg;base64,") center/cover no-repeat; }
+  .social-block:nth-child(5) { background: url("data:image/jpeg;base64,") center/cover no-repeat; }
+
+  .social-block::after {
+    content: '@anneclarkstudio';
+    position: absolute;
+    inset: 0;
+    background: rgba(30,42,36,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.35s;
+    display: grid;
+    place-items: center;
+  }
+
+  .social-block:hover::after { opacity: 1; }
+
+  /* ══════════════════════════════════════
+     CONTACT / FOOTER SECTION
+  ══════════════════════════════════════ */
+  .contact-section {
+    background: linear-gradient(160deg, var(--blush-soft) 0%, var(--light-pink) 60%, var(--petal) 100%);
+    padding: 100px 72px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-section::before {
+    content: 'Hello';
+    position: absolute;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 280px;
+    font-weight: 700;
+    font-style: italic;
+    color: rgba(255,255,255,0.22);
+    bottom: -40px;
+    right: -20px;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .contact-inner {
+    max-width: 580px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .contact-inner .section-eyebrow { color: var(--rose-mid); }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 40px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .form-field label {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: rgba(30,42,36,0.55);
+  }
+
+  .form-field input,
+  .form-field textarea,
+  .form-field select {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    color: var(--ink);
+    background: rgba(255,255,255,0.65);
+    border: 1px solid rgba(184,168,152,0.35);
+    padding: 14px 18px;
+    outline: none;
+    transition: all 0.3s;
+    backdrop-filter: blur(6px);
+    -webkit-appearance: none;
+  }
+
+  .form-field input:focus,
+  .form-field textarea:focus,
+  .form-field select:focus {
+    background: rgba(255,255,255,0.9);
+    border-color: var(--rose-mid);
+  }
+
+  .form-field textarea { resize: vertical; min-height: 120px; }
+
+  .form-submit {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--warm-white);
+    background: var(--ink);
+    border: none;
+    padding: 18px 44px;
+    cursor: pointer;
+    transition: all 0.3s;
+    align-self: flex-start;
+    border: 1.5px solid var(--ink);
+  }
+
+  .form-submit:hover {
+    background: var(--rose-mid);
+    border-color: var(--rose-mid);
+  }
+
+  /* ══════════════════════════════════════
+     FOOTER
+  ══════════════════════════════════════ */
+  footer {
+    background: var(--ink);
+    padding: 52px 72px 36px;
+  }
+
+  .footer-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(248,243,237,0.08);
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .footer-logo-name {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.18em;
+    color: var(--cream);
+  }
+
+  .footer-tagline {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 200;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(248,243,237,0.35);
+  }
+
+  .footer-color-dots {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .footer-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+  }
+
+  .footer-links-group { display: flex; flex-direction: column; gap: 10px; }
+
+  .footer-group-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 200;
+    font-size: 9px;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    color: rgba(248,243,237,0.3);
+    margin-bottom: 6px;
+  }
+
+  .footer-link {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 200;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    color: rgba(248,243,237,0.55);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-link:hover { color: var(--light-pink); }
+
+  .footer-bottom {
+    padding-top: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-copy {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    color: rgba(248,243,237,0.25);
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 20px;
+  }
+
+  .footer-social a {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: rgba(248,243,237,0.35);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-social a:hover { color: var(--light-pink); }
+
+  /* ══════════════════════════════════════
+     ANIMATIONS
+  ══════════════════════════════════════ */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ══════════════════════════════════════
+     RESPONSIVE HINTS
+  ══════════════════════════════════════ */
+  @media (max-width: 900px) {
+    nav { padding: 16px 28px; }
+    .nav-links { display: none; }
+    section { padding: 70px 28px; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { min-height: 340px; }
+    .about-section { grid-template-columns: 1fr; }
+    .shop-grid { grid-template-columns: repeat(2, 1fr); }
+    .portraits-grid { grid-template-columns: 1fr 1fr; }
+    .portraits-grid .portrait-block:first-child { grid-row: auto; }
+    .social-grid { grid-template-columns: repeat(3, 1fr); }
+    footer { padding: 40px 28px 28px; }
+    .footer-top { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-circle">
+      <div class="nav-logo-left"></div>
+      <div class="nav-logo-text-wrap">
+        <div class="nav-logo-anne">Anne</div>
+        <div class="nav-logo-clark">Clark</div>
+        <div class="nav-logo-studio">studio</div>
+      </div>
+      <div class="nav-dot-rose"></div>
+    </div>
+    <span class="nav-brand-name">Anne Clark Studio</span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#shop">Shop Prints</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#portraits">Family Portraits</a></li>
+    <li><a href="#exhibitions">Exhibitions</a></li>
+    <li><a href="anne-clark-studio-gear.html">Shop Gear</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <a href="#shop" class="nav-cta">Shop Prints</a>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Fine Art · Photography · Kansas City</div>
+    <h1 class="hero-title">Art that<br>lives on <span>your walls.</span></h1>
+    <p class="hero-body">Original fine art prints and photography by Anne Clark — each piece crafted to bring warmth, beauty, and intention into your home.</p>
+    <div class="hero-buttons">
+      <a href="#shop" class="btn-primary">Shop Prints</a>
+      <a href="#about" class="btn-secondary">About Anne</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-block"><div class="img-label">Fine Art</div></div>
+    <div class="hero-img-block"><div class="img-label">Photography</div></div>
+    <div class="hero-img-block"><div class="img-label">Portraits</div></div>
+    <div class="hero-img-block"><div class="img-label">Collections</div></div>
+    <div class="hero-gold-bar"></div>
+  </div>
+</section>
+
+<!-- ── MARQUEE ── -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span class="marquee-item">Fine Art Prints <span>✦</span></span>
+    <span class="marquee-item">Digital Downloads <span>✦</span></span>
+    <span class="marquee-item">Family Portraits <span>✦</span></span>
+    <span class="marquee-item">Kansas City <span>✦</span></span>
+    <span class="marquee-item">Anne Clark Studio <span>✦</span></span>
+    <span class="marquee-item">Photography <span>✦</span></span>
+    <span class="marquee-item">Original Art <span>✦</span></span>
+    <span class="marquee-item">Fine Art Prints <span>✦</span></span>
+    <span class="marquee-item">Digital Downloads <span>✦</span></span>
+    <span class="marquee-item">Family Portraits <span>✦</span></span>
+    <span class="marquee-item">Kansas City <span>✦</span></span>
+    <span class="marquee-item">Anne Clark Studio <span>✦</span></span>
+    <span class="marquee-item">Photography <span>✦</span></span>
+    <span class="marquee-item">Original Art <span>✦</span></span>
+  </div>
+</div>
+
+
+<!-- ── EXHIBITIONS ── -->
+<section id="exhibitions" style="background: #1E2A24; padding: 100px 72px; position: relative; overflow: hidden;">
+
+  <!-- Watermark -->
+  <div style="position:absolute; font-family:'Bodoni Moda',serif; font-size:200px; font-weight:700; font-style:italic; color:rgba(255,255,255,0.04); bottom:-20px; right:-10px; pointer-events:none; line-height:1; letter-spacing:-0.04em;">Shows</div>
+
+  <div style="margin-bottom:56px;">
+    <div style="font-family:'Outfit',sans-serif; font-weight:200; font-size:10px; letter-spacing:0.5em; text-transform:uppercase; color:#EBA8A8; margin-bottom:18px;">Selected Exhibitions</div>
+    <div style="width:50px; height:1.5px; background:linear-gradient(90deg,#D4878B,#C9A96E); margin-bottom:28px; border-radius:2px;"></div>
+    <h2 style="font-family:'Bodoni Moda',serif; font-size:clamp(36px,4vw,56px); font-weight:700; font-style:italic; line-height:1.1; color:#F8F3ED; margin-bottom:20px;">In the <span style="color:#F2C4C4;">Gallery.</span></h2>
+    <p style="font-family:'Outfit',sans-serif; font-weight:200; font-size:15px; line-height:1.9; color:rgba(248,243,237,0.55); max-width:580px;">Anne's work has been exhibited in collaboration with the Nelson-Atkins Museum of Art and the Kansas City Society of Contemporary Photography — two of the most respected institutions in the region.</p>
+  </div>
+
+  <!-- Show 1: Postcards from the Middle -->
+  <div style="margin-bottom:80px;">
+    <div style="display:flex; align-items:center; gap:20px; margin-bottom:32px;">
+      <div style="width:40px; height:1px; background:rgba(242,196,196,0.4);"></div>
+      <div style="font-family:'Outfit',sans-serif; font-weight:200; font-size:9px; letter-spacing:0.5em; text-transform:uppercase; color:#EBA8A8;">Exhibition 01</div>
+    </div>
+    <h3 style="font-family:'Bodoni Moda',serif; font-size:32px; font-weight:400; font-style:italic; color:#F8F3ED; margin-bottom:8px;">Postcards from the Middle</h3>
+    <p style="font-family:'Outfit',sans-serif; font-weight:200; font-size:12px; letter-spacing:0.25em; color:rgba(248,243,237,0.4); text-transform:uppercase; margin-bottom:32px;">Nelson-Atkins Museum of Art &nbsp;·&nbsp; Kansas City Society of Contemporary Photography</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+      <div style="aspect-ratio:4/3; overflow:hidden; position:relative;">
+        <img src="data:image/jpeg;base64," style="width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+        <div style="position:absolute; bottom:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#F2C4C4,#C9A96E);"></div>
+      </div>
+      <div style="aspect-ratio:4/3; overflow:hidden; position:relative;">
+        <img src="data:image/jpeg;base64," style="width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+        <div style="position:absolute; bottom:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#F2C4C4,#C9A96E);"></div>
+      </div>
+    </div>
+    <p style="font-family:'Outfit',sans-serif; font-weight:200; font-size:13px; line-height:1.9; color:rgba(248,243,237,0.45); margin-top:20px; max-width:640px; font-style:italic;">"Postcards from the Middle" — a documentary photography series exploring life, landscape, and identity across the American midwest.</p>
+  </div>
+
+  <!-- Show 2: Portrait of a City -->
+  <div>
+    <div style="display:flex; align-items:center; gap:20px; margin-bottom:32px;">
+      <div style="width:40px; height:1px; background:rgba(242,196,196,0.4);"></div>
+      <div style="font-family:'Outfit',sans-serif; font-weight:200; font-size:9px; letter-spacing:0.5em; text-transform:uppercase; color:#EBA8A8;">Exhibition 02</div>
+    </div>
+    <h3 style="font-family:'Bodoni Moda',serif; font-size:32px; font-weight:400; font-style:italic; color:#F8F3ED; margin-bottom:8px;">Portrait of a City</h3>
+    <p style="font-family:'Outfit',sans-serif; font-weight:200; font-size:12px; letter-spacing:0.25em; color:rgba(248,243,237,0.4); text-transform:uppercase; margin-bottom:32px;">Nelson-Atkins Museum of Art &nbsp;·&nbsp; Kansas City Society of Contemporary Photography</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+      <div style="aspect-ratio:4/3; overflow:hidden; position:relative;">
+        <img src="data:image/jpeg;base64," style="width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+        <div style="position:absolute; bottom:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#C9A96E,#9DBFAA);"></div>
+      </div>
+      <div style="aspect-ratio:4/3; overflow:hidden; position:relative;">
+        <img src="data:image/jpeg;base64," style="width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+        <div style="position:absolute; bottom:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#C9A96E,#9DBFAA);"></div>
+      </div>
+    </div>
+    <p style="font-family:'Outfit',sans-serif; font-weight:200; font-size:13px; line-height:1.9; color:rgba(248,243,237,0.45); margin-top:20px; max-width:640px; font-style:italic;">"Portrait of a City" — an intimate look at Kansas City's soul, its people, places, and the quietly extraordinary moments that define urban life.</p>
+  </div>
+
+  <!-- Nelson-Atkins credential badge -->
+  <div style="margin-top:60px; padding:28px 36px; border:1px solid rgba(242,196,196,0.2); display:inline-flex; align-items:center; gap:24px;">
+    <div style="width:3px; height:40px; background:linear-gradient(180deg,#F2C4C4,#C9A96E);"></div>
+    <div>
+      <div style="font-family:'Bodoni Moda',serif; font-size:14px; font-weight:400; font-style:italic; color:#F8F3ED; margin-bottom:4px;">In collaboration with</div>
+      <div style="font-family:'Outfit',sans-serif; font-weight:200; font-size:11px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(248,243,237,0.5);">Nelson-Atkins Museum of Art &nbsp;·&nbsp; KC Society of Contemporary Photography</div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ── SHOP PRINTS ── -->
+<section class="shop-section" id="shop">
+  <div class="shop-header reveal">
+    <div>
+      <div class="section-eyebrow">The Collection</div>
+      <div class="gold-rule"></div>
+      <h2 class="section-title">Shop <span>Art Prints</span></h2>
+      <p class="section-body">Digital downloads and fine art prints — ready to bring into your home instantly. Each piece is a one-of-a-kind creation.</p>
+    </div>
+    <a href="#" class="btn-secondary">View All Prints →</a>
+  </div>
+
+  <div class="shop-grid" style="grid-template-columns: repeat(4, 1fr);">
+    <div class="print-card reveal">
+      <div class="print-img" style="background: url('data:image/jpeg;base64,') center/cover no-repeat;"></div>
+      <div class="print-overlay"><div class="print-overlay-btn">Quick View</div></div>
+      <div class="print-info">
+        <div><div class="print-name">Silhouette at Dusk</div><div class="print-type">Digital Download · Photography</div></div>
+        <div class="print-price">$32</div>
+      </div>
+    </div>
+    <div class="print-card reveal">
+      <div class="print-img" style="background: url('data:image/jpeg;base64,') center/cover no-repeat;"></div>
+      <div class="print-overlay"><div class="print-overlay-btn">Quick View</div></div>
+      <div class="print-info">
+        <div><div class="print-name">Sunflower Field</div><div class="print-type">Digital Download · Photography</div></div>
+        <div class="print-price">$28</div>
+      </div>
+    </div>
+    <div class="print-card reveal">
+      <div class="print-img" style="background: url('data:image/jpeg;base64,') center/cover no-repeat;"></div>
+      <div class="print-overlay"><div class="print-overlay-btn">Quick View</div></div>
+      <div class="print-info">
+        <div><div class="print-name">Monument Rocks</div><div class="print-type">Digital Download · Photography</div></div>
+        <div class="print-price">$34</div>
+      </div>
+    </div>
+    <div class="print-card reveal">
+      <div class="print-img" style="background: url('data:image/jpeg;base64,') center/cover no-repeat;"></div>
+      <div class="print-overlay"><div class="print-overlay-btn">Quick View</div></div>
+      <div class="print-info">
+        <div><div class="print-name">KC Golden Hour</div><div class="print-type">Digital Download · Photography</div></div>
+        <div class="print-price">$30</div>
+      </div>
+    </div>
+    <div class="print-card reveal">
+      <div class="print-img" style="background: url('data:image/jpeg;base64,') center/cover no-repeat;"></div>
+      <div class="print-overlay"><div class="print-overlay-btn">Quick View</div></div>
+      <div class="print-info">
+        <div><div class="print-name">Colorado Rockies</div><div class="print-type">Digital Download · Photography</div></div>
+        <div class="print-price">$36</div>
+      </div>
+    </div>
+    <div class="print-card reveal">
+      <div class="print-img" style="background: url('data:image/jpeg;base64,') center/cover no-repeat;"></div>
+      <div class="print-overlay"><div class="print-overlay-btn">Quick View</div></div>
+      <div class="print-info">
+        <div><div class="print-name">Lake Silhouette</div><div class="print-type">Digital Download · Fine Art</div></div>
+        <div class="print-price">$32</div>
+      </div>
+    </div>
+    <div class="print-card reveal">
+      <div class="print-img" style="background: url('data:image/jpeg;base64,') center/cover no-repeat;"></div>
+      <div class="print-overlay"><div class="print-overlay-btn">Quick View</div></div>
+      <div class="print-info">
+        <div><div class="print-name">Purple Dusk</div><div class="print-type">Digital Download · Fine Art</div></div>
+        <div class="print-price">$30</div>
+      </div>
+    </div>
+    <div class="print-card reveal">
+      <div class="print-img" style="background: url('data:image/jpeg;base64,') center/cover no-repeat;"></div>
+      <div class="print-overlay"><div class="print-overlay-btn">Quick View</div></div>
+      <div class="print-info">
+        <div><div class="print-name">Crescent Moon</div><div class="print-type">Digital Download · Photography</div></div>
+        <div class="print-price">$38</div>
+      </div>
+    </div>
+    <div class="print-card reveal">
+      <div class="print-img" style="background: url('data:image/jpeg;base64,') center/cover no-repeat;"></div>
+      <div class="print-overlay"><div class="print-overlay-btn">Quick View</div></div>
+      <div class="print-info">
+        <div><div class="print-name">Harbor at Sunset</div><div class="print-type">Digital Download · Photography</div></div>
+        <div class="print-price">$32</div>
+      </div>
+    </div>
+    <div class="print-card reveal">
+      <div class="print-img" style="background: url('data:image/jpeg;base64,') center/cover no-repeat;"></div>
+      <div class="print-overlay"><div class="print-overlay-btn">Quick View</div></div>
+      <div class="print-info">
+        <div><div class="print-name">Storm Trail</div><div class="print-type">Digital Download · Photography</div></div>
+        <div class="print-price">$34</div>
+      </div>
+    </div>
+    <div class="print-card reveal">
+      <div class="print-img" style="background: url('data:image/jpeg;base64,') center/cover no-repeat;"></div>
+      <div class="print-overlay"><div class="print-overlay-btn">Quick View</div></div>
+      <div class="print-info">
+        <div><div class="print-name">Teal Horizon</div><div class="print-type">Digital Download · Fine Art</div></div>
+        <div class="print-price">$30</div>
+      </div>
+    </div>
+    <div class="print-card reveal">
+      <div class="print-img" style="background: url('data:image/jpeg;base64,') center/cover no-repeat;"></div>
+      <div class="print-overlay"><div class="print-overlay-btn">Quick View</div></div>
+      <div class="print-info">
+        <div><div class="print-name">Kansas Sunset</div><div class="print-type">Digital Download · Photography</div></div>
+        <div class="print-price">$28</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section class="about-section" id="about">
+  <div class="about-img-side">
+    <div class="about-img-tag">Kansas City, Missouri</div>
+  </div>
+  <div class="about-content">
+    <div class="section-eyebrow">The Artist</div>
+    <div class="gold-rule"></div>
+    <h2 class="section-title">Hello, I'm <span>Anne.</span></h2>
+    <p class="section-body">I'm a Kansas City-based fine art photographer and artist with a passion for capturing beauty in the quiet, the coastal, and the everyday. My work spans original art prints, photography collections, and intimate family portrait sessions.</p>
+    <p class="section-body" style="margin-top:-8px;">Every piece I create is made with intention — to live beautifully in your home and tell a story worth keeping.</p>
+    <div class="about-stats">
+      <div class="stat">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Years Creating</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Families Served</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">KC</div>
+        <div class="stat-label">Based & Traveling</div>
+      </div>
+    </div>
+    <div style="margin-top: 8px;">
+      <a href="#contact" class="btn-primary">Work With Me</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAMILY PORTRAITS ── -->
+<section class="portraits-section" id="portraits">
+  <div class="portraits-header reveal">
+    <div>
+      <div class="section-eyebrow">Portrait Sessions</div>
+      <div class="gold-rule"></div>
+      <h2 class="section-title">Family <span>Portraits</span></h2>
+      <p class="section-body">On-location, natural light portrait sessions throughout the Kansas City area. Maternity, babies, children, seniors, families — and yes, pets welcome!</p>
+    </div>
+  </div>
+
+  <!-- Row 1: 3 cols -->
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-bottom:12px;">
+    <div class="portrait-block reveal" style="overflow:hidden; cursor:pointer;">
+      <div style="aspect-ratio:4/5; overflow:hidden;">
+        <img src="data:image/jpeg;base64," style="width:100%; height:100%; object-fit:cover; object-position:center top; transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      </div>
+    </div>
+    <div class="portrait-block reveal" style="overflow:hidden; cursor:pointer;">
+      <div style="aspect-ratio:4/5; overflow:hidden;">
+        <img src="data:image/jpeg;base64," style="width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      </div>
+    </div>
+    <div class="portrait-block reveal" style="overflow:hidden; cursor:pointer;">
+      <div style="aspect-ratio:4/5; overflow:hidden;">
+        <img src="data:image/jpeg;base64," style="width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 2: wide + 2 narrow -->
+  <div style="display:grid; grid-template-columns:2fr 1fr 1fr; gap:12px; margin-bottom:12px;">
+    <div class="portrait-block reveal" style="overflow:hidden; cursor:pointer;">
+      <div style="aspect-ratio:16/9; overflow:hidden;">
+        <img src="data:image/jpeg;base64," style="width:100%; height:100%; object-fit:cover; object-position:center top; transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      </div>
+    </div>
+    <div class="portrait-block reveal" style="overflow:hidden; cursor:pointer;">
+      <div style="aspect-ratio:3/4; overflow:hidden;">
+        <img src="data:image/jpeg;base64," style="width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      </div>
+    </div>
+    <div class="portrait-block reveal" style="overflow:hidden; cursor:pointer;">
+      <div style="aspect-ratio:3/4; overflow:hidden;">
+        <img src="data:image/jpeg;base64," style="width:100%; height:100%; object-fit:cover; object-position:center top; transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 3: 2 narrow + wide -->
+  <div style="display:grid; grid-template-columns:1fr 1fr 2fr; gap:12px; margin-bottom:12px;">
+    <div class="portrait-block reveal" style="overflow:hidden; cursor:pointer;">
+      <div style="aspect-ratio:3/4; overflow:hidden;">
+        <img src="data:image/jpeg;base64," style="width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      </div>
+    </div>
+    <div class="portrait-block reveal" style="overflow:hidden; cursor:pointer;">
+      <div style="aspect-ratio:3/4; overflow:hidden;">
+        <img src="data:image/jpeg;base64," style="width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      </div>
+    </div>
+    <div class="portrait-block reveal" style="overflow:hidden; cursor:pointer;">
+      <div style="aspect-ratio:16/9; overflow:hidden;">
+        <img src="data:image/jpeg;base64," style="width:100%; height:100%; object-fit:cover; object-position:center top; transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 4: 5 squares -->
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr 1fr; gap:12px; margin-bottom:48px;">
+    <div class="portrait-block reveal" style="overflow:hidden; cursor:pointer;">
+      <div style="aspect-ratio:1; overflow:hidden;">
+        <img src="data:image/jpeg;base64," style="width:100%; height:100%; object-fit:cover; object-position:center top; transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      </div>
+    </div>
+    <div class="portrait-block reveal" style="overflow:hidden; cursor:pointer;">
+      <div style="aspect-ratio:1; overflow:hidden;">
+        <img src="data:image/jpeg;base64," style="width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      </div>
+    </div>
+    <div class="portrait-block reveal" style="overflow:hidden; cursor:pointer;">
+      <div style="aspect-ratio:1; overflow:hidden;">
+        <img src="data:image/jpeg;base64," style="width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      </div>
+    </div>
+    <div class="portrait-block reveal" style="overflow:hidden; cursor:pointer;">
+      <div style="aspect-ratio:1; overflow:hidden;">
+        <img src="data:image/jpeg;base64," style="width:100%; height:100%; object-fit:cover; object-position:center top; transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      </div>
+    </div>
+    <div class="portrait-block reveal" style="overflow:hidden; cursor:pointer;">
+      <div style="aspect-ratio:1; overflow:hidden;">
+        <img src="data:image/jpeg;base64," style="width:100%; height:100%; object-fit:cover; object-position:center top; transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="portraits-cta reveal">
+    <div>
+      <div class="portraits-cta-text">Ready to book your session?</div>
+      <div class="portraits-cta-sub">Natural light · On location · Kansas City area · Pets welcome</div>
+    </div>
+    <a href="#contact" class="btn-primary">Book a Session</a>
+  </div>
+</section>
+
+
+<!-- ── GEAR TEASER ── -->
+<section style="background:var(--ink); padding:80px 72px; position:relative; overflow:hidden;">
+  <div style="position:absolute; font-family:'Playfair Display',serif; font-size:220px; font-weight:900; font-style:italic; color:rgba(255,255,255,0.04); bottom:-20px; right:-10px; pointer-events:none;">gear</div>
+  <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:40px; position:relative; z-index:1;">
+    <div>
+      <div style="font-family:'Outfit',sans-serif; font-weight:200; font-size:10px; letter-spacing:0.5em; text-transform:uppercase; color:var(--petal); margin-bottom:16px;">My Gear & Favorites</div>
+      <div style="width:50px; height:1.5px; background:linear-gradient(90deg,var(--rose-mid),var(--gold)); margin-bottom:24px; border-radius:2px;"></div>
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(32px,4vw,50px); font-weight:700; font-style:italic; color:var(--cream); margin-bottom:16px; line-height:1.1;">The tools behind <span style="color:var(--light-pink);">the work.</span></h2>
+      <p style="font-family:'Outfit',sans-serif; font-weight:200; font-size:14px; line-height:1.9; color:rgba(248,243,237,0.55); max-width:500px;">Cameras, lenses, art supplies, editing software — everything I actually use to create the work you see here. Sharing it all with Amazon affiliate links so you can shop the same gear.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:16px; align-items:flex-start;">
+      <div style="display:flex; gap:16px; flex-wrap:wrap;">
+        <div style="background:rgba(248,243,237,0.06); border:1px solid rgba(248,243,237,0.1); padding:16px 24px; text-align:center;">
+          <div style="font-size:28px; margin-bottom:6px;">📷</div>
+          <div style="font-family:'Outfit',sans-serif; font-weight:200; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(248,243,237,0.5);">Nikon · DJI</div>
+        </div>
+        <div style="background:rgba(248,243,237,0.06); border:1px solid rgba(248,243,237,0.1); padding:16px 24px; text-align:center;">
+          <div style="font-size:28px; margin-bottom:6px;">🎬</div>
+          <div style="font-family:'Outfit',sans-serif; font-weight:200; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(248,243,237,0.5);">GoPro · Sony</div>
+        </div>
+        <div style="background:rgba(248,243,237,0.06); border:1px solid rgba(248,243,237,0.1); padding:16px 24px; text-align:center;">
+          <div style="font-size:28px; margin-bottom:6px;">🎨</div>
+          <div style="font-family:'Outfit',sans-serif; font-weight:200; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(248,243,237,0.5);">Art Supplies</div>
+        </div>
+      </div>
+      <a href="anne-clark-studio-gear.html" style="font-family:'Outfit',sans-serif; font-weight:300; font-size:11px; letter-spacing:0.3em; text-transform:uppercase; color:var(--warm-white); background:transparent; padding:15px 36px; text-decoration:none; border:1.5px solid rgba(242,196,196,0.5); transition:all 0.3s; display:inline-block;">View All Gear & Favorites →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── INSTAGRAM ── -->
+<section class="social-section">
+  <div class="section-eyebrow reveal">Follow Along</div>
+  <div class="gold-rule" style="margin: 0 auto 10px;"></div>
+  <h2 class="section-title reveal" style="font-size:32px;">@anneclarkstudio</h2>
+  <div class="social-grid">
+    <div class="social-block reveal"></div>
+    <div class="social-block reveal"></div>
+    <div class="social-block reveal"></div>
+    <div class="social-block reveal"></div>
+    <div class="social-block reveal"></div>
+  </div>
+</section>
+
+
+<!-- ── CONTACT ── -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="section-eyebrow">Get In Touch</div>
+    <div class="gold-rule"></div>
+    <h2 class="section-title" style="font-size: clamp(32px,3.5vw,50px);">Let's create<br><span>something beautiful.</span></h2>
+    <p class="section-body">Whether you're interested in a print, a portrait session, or just want to say hello — I'd love to hear from you.</p>
+
+    <div class="contact-form">
+      <div class="form-row">
+        <div class="form-field">
+          <label>First Name</label>
+          <input type="text" placeholder="Jane">
+        </div>
+        <div class="form-field">
+          <label>Last Name</label>
+          <input type="text" placeholder="Smith">
+        </div>
+      </div>
+      <div class="form-field">
+        <label>Email</label>
+        <input type="email" placeholder="jane@example.com">
+      </div>
+      <div class="form-field">
+        <label>I'm Interested In</label>
+        <select>
+          <option>Art Prints / Digital Downloads</option>
+          <option>Family Portrait Session</option>
+          <option>Maternity Session</option>
+          <option>Senior Portraits</option>
+          <option>Something Else</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>Message</label>
+        <textarea placeholder="Tell me a little about what you're looking for..."></textarea>
+      </div>
+      <button class="form-submit">Send Message →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+
+<!-- ── STAY SWEET KC ── -->
+<section style="position:relative; height:85vh; min-height:600px; overflow:hidden;">
+  <!-- Full bleed photo -->
+  <div style="position:absolute; inset:0; background:url('data:image/jpeg;base64,') center/cover no-repeat;"></div>
+  <!-- Gradient overlay -->
+  <div style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(30,42,36,0.1) 0%, rgba(30,42,36,0.0) 40%, rgba(30,42,36,0.65) 100%);"></div>
+  <!-- Text overlay -->
+  <div style="position:absolute; bottom:64px; left:72px; right:72px; z-index:2;">
+    <div style="font-family:'Outfit',sans-serif; font-weight:200; font-size:10px; letter-spacing:0.5em; text-transform:uppercase; color:rgba(248,243,237,0.6); margin-bottom:14px;">Kansas City · Portrait of a City</div>
+    <h2 style="font-family:'Playfair Display',serif; font-size:clamp(36px,5vw,72px); font-weight:700; font-style:italic; color:#FDFAF6; line-height:1.05; margin-bottom:22px; text-shadow:0 4px 24px rgba(30,42,36,0.4);">Stay Sweet, <span style="color:#F2C4C4;">KC.</span></h2>
+    <a href="#contact" style="font-family:'Outfit',sans-serif; font-weight:300; font-size:11px; letter-spacing:0.35em; text-transform:uppercase; color:#FDFAF6; background:rgba(255,255,255,0.12); padding:14px 36px; text-decoration:none; border:1.5px solid rgba(255,255,255,0.4); backdrop-filter:blur(8px); display:inline-block; transition:all 0.3s;">Work With Me →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo-name">Anne Clark Studio</div>
+      <div class="footer-tagline">Fine Art · Photography · Kansas City</div>
+      <div class="footer-color-dots">
+        <div class="footer-dot" style="background:#F2C4C4;"></div>
+        <div class="footer-dot" style="background:#C9A96E;"></div>
+        <div class="footer-dot" style="background:#9DBFAA;"></div>
+        <div class="footer-dot" style="background:#F8F3ED; border:1px solid rgba(255,255,255,0.2);"></div>
+      </div>
+    </div>
+
+    <div class="footer-links-group">
+      <div class="footer-group-title">Shop</div>
+      <a href="#shop" class="footer-link">All Prints</a>
+      <a href="#shop" class="footer-link">Fine Art</a>
+      <a href="#shop" class="footer-link">Photography Prints</a>
+      <a href="#shop" class="footer-link">Digital Downloads</a>
+    </div>
+
+    <div class="footer-links-group">
+      <div class="footer-group-title">Sessions</div>
+      <a href="#portraits" class="footer-link">Family Portraits</a>
+      <a href="#portraits" class="footer-link">Maternity</a>
+      <a href="#portraits" class="footer-link">Newborn & Baby</a>
+      <a href="#portraits" class="footer-link">Senior Portraits</a>
+    </div>
+
+    <div class="footer-links-group">
+      <div class="footer-group-title">Connect</div>
+      <a href="#about" class="footer-link">About Anne</a>
+      <a href="#contact" class="footer-link">Contact</a>
+      <a href="https://instagram.com/anneclarkstudio" class="footer-link">Instagram</a>
+      <a href="#" class="footer-link">Pinterest</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Anne Clark Studio · Kansas City, Missouri · All rights reserved.</div>
+    <div class="footer-social">
+      <a href="#">Instagram</a>
+      <a href="#">Pinterest</a>
+      <a href="#">Etsy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  reveals.forEach(el => observer.observe(el));
+
+  // Nav shrink on scroll
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      nav.style.padding = '12px 52px';
+    } else {
+      nav.style.padding = '18px 52px';
+    }
+  });
+</script>
+</body>
+</html>
