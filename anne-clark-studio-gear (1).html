@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anne Clark Studio — My Gear & Favorites</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Great+Vibes&family=Outfit:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --cream: #F8F3ED;
+    --warm-white: #FDFAF6;
+    --ink: #1E2A24;
+    --sage: #9DBFAA;
+    --gold: #C9A96E;
+    --taupe: #B8A898;
+    --light-pink: #F2C4C4;
+    --petal: #EBA8A8;
+    --blush: #F7DADA;
+    --rose: #D4878B;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--warm-white);
+    color: var(--ink);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 52px;
+    background: rgba(253,250,246,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(184,168,152,0.15);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+  }
+
+  .nav-circle {
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #F2C4C4, #EBA8A8, #D4878B);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 12px rgba(235,168,168,0.4);
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .nav-circle .anne { font-family:'Playfair Display',serif; font-size:10px; font-weight:900; font-style:italic; color:#1E2A24; line-height:1; }
+  .nav-circle .clark { font-family:'Playfair Display',serif; font-size:10px; font-weight:900; font-style:italic; color:#1E2A24; line-height:1; margin-top:-1px; }
+  .nav-circle .studio { font-family:'Great Vibes',cursive; font-size:10px; color:rgba(30,42,36,0.6); line-height:1; margin-top:1px; }
+
+  .nav-dot {
+    position: absolute;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--petal), var(--rose));
+    top: -1px; right: -1px;
+    box-shadow: 0 2px 6px rgba(235,168,168,0.55), 0 0 0 1.5px rgba(255,255,255,0.6);
+  }
+
+  .nav-brand { font-family:'Playfair Display',serif; font-size:13px; font-weight:400; font-style:italic; letter-spacing:0.2em; color:var(--ink); text-transform:uppercase; }
+
+  .nav-back {
+    font-family:'Outfit',sans-serif; font-weight:200; font-size:13px;
+    letter-spacing:0.3em; text-transform:uppercase; color:var(--taupe);
+    text-decoration:none; transition:color 0.3s;
+  }
+  .nav-back:hover { color:var(--ink); }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 140px 72px 80px;
+    background: linear-gradient(160deg, var(--blush) 0%, var(--light-pink) 50%, var(--petal) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: 'gear';
+    font-family: 'Playfair Display', serif;
+    font-size: 280px;
+    font-weight: 900;
+    font-style: italic;
+    color: rgba(255,255,255,0.18);
+    position: absolute;
+    bottom: -40px; right: -20px;
+    line-height: 1;
+    pointer-events: none;
+    letter-spacing: -0.04em;
+  }
+
+  .hero-eyebrow {
+    font-family:'Outfit',sans-serif; font-weight:200; font-size:10px;
+    letter-spacing:0.5em; text-transform:uppercase; color:var(--rose);
+    margin-bottom:18px;
+  }
+
+  .hero-title {
+    font-family:'Playfair Display',serif; font-size:clamp(44px,6vw,80px);
+    font-weight:700; font-style:italic; line-height:1.05; color:var(--ink);
+    margin-bottom:20px;
+  }
+
+  .hero-title span { color: rgba(30,42,36,0.45); }
+
+  .hero-body {
+    font-family:'Outfit',sans-serif; font-weight:200; font-size:15px;
+    line-height:1.9; color:rgba(30,42,36,0.6); max-width:560px;
+  }
+
+  .affiliate-note {
+    margin-top:24px;
+    font-family:'Outfit',sans-serif; font-weight:200; font-size:13px;
+    letter-spacing:0.1em; color:rgba(30,42,36,0.4);
+    font-style:italic;
+  }
+
+  /* ── SECTION COMMONS ── */
+  .gear-section { padding: 80px 72px; }
+  .gear-section:nth-child(even) { background: var(--cream); }
+
+  .section-eyebrow {
+    font-family:'Outfit',sans-serif; font-weight:200; font-size:10px;
+    letter-spacing:0.5em; text-transform:uppercase; color:var(--rose);
+    margin-bottom:16px;
+  }
+
+  .gold-rule {
+    width:50px; height:1.5px;
+    background:linear-gradient(90deg, var(--rose), var(--gold));
+    margin-bottom:24px; border-radius:2px;
+  }
+
+  .section-title {
+    font-family:'Playfair Display',serif; font-size:clamp(32px,4vw,50px);
+    font-weight:700; font-style:italic; line-height:1.1; color:var(--ink);
+    margin-bottom:14px;
+  }
+
+  .section-title span { color:var(--sage); }
+
+  .section-body {
+    font-family:'Outfit',sans-serif; font-weight:200; font-size:14px;
+    line-height:1.9; color:rgba(30,42,36,0.55); max-width:580px;
+    margin-bottom:48px;
+  }
+
+  /* ── GEAR GRID ── */
+  .gear-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .gear-card {
+    background: var(--warm-white);
+    border: 1px solid rgba(184,168,152,0.2);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gear-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(30,42,36,0.1);
+    border-color: rgba(235,168,168,0.4);
+  }
+
+  /* Pink top bar on hover */
+  .gear-card::before {
+    content:''; position:absolute; top:0; left:0; right:0; height:3px;
+    background:linear-gradient(90deg, var(--light-pink), var(--gold));
+    transform:scaleX(0); transition:transform 0.4s; transform-origin:left;
+  }
+
+  .gear-card:hover::before { transform:scaleX(1); }
+
+  /* Icon/image area */
+  .gear-icon {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gear-icon-nikon { background:linear-gradient(145deg, #f0ede8, #e8e3dc); }
+  .gear-icon-dji { background:linear-gradient(145deg, #e8edf0, #dce3e8); }
+  .gear-icon-gopro { background:linear-gradient(145deg, #e8f0ec, #dce8e3); }
+  .gear-icon-sony { background:linear-gradient(145deg, #ede8f0, #e3dce8); }
+  .gear-icon-lens { background:linear-gradient(145deg, #f0ece8, #e8e0d8); }
+  .gear-icon-bag { background:linear-gradient(145deg, #edf0e8, #e3e8dc); }
+  .gear-icon-tripod { background:linear-gradient(145deg, #f0e8ec, #e8dce3); }
+  .gear-icon-lr { background:linear-gradient(145deg, #e8eaf0, #dcdfe8); }
+  .gear-icon-art { background:linear-gradient(145deg, #f0e8e8, #e8dcdc); }
+  .gear-icon-canvas { background:linear-gradient(145deg, #eef0e8, #e5e8dc); }
+  .gear-icon-paper { background:linear-gradient(145deg, #f0ede8, #e8e4dc); }
+  .gear-icon-frame { background:linear-gradient(145deg, #e8f0ee, #dce8e5); }
+
+  .gear-brand {
+    font-family:'Outfit',sans-serif; font-weight:200; font-size:9px;
+    letter-spacing:0.4em; text-transform:uppercase; color:var(--taupe);
+    padding:18px 20px 4px;
+  }
+
+  .gear-name {
+    font-family:'Playfair Display',serif; font-size:21px; font-weight:600;
+    font-style:italic; color:var(--ink); padding:0 20px 8px;
+    line-height:1.3;
+  }
+
+  .gear-desc {
+    font-family:'Outfit',sans-serif; font-weight:200; font-size:16px;
+    line-height:1.85; font-weight:400; color:rgba(30,42,36,0.55); padding:0 20px 20px;
+    flex:1;
+  }
+
+  .gear-link {
+    display:block; margin:0 20px 20px;
+    font-family:'Outfit',sans-serif; font-weight:300; font-size:10px;
+    letter-spacing:0.3em; text-transform:uppercase; color:var(--warm-white);
+    background:var(--ink); padding:12px 20px; text-align:center;
+    text-decoration:none; transition:all 0.3s; border:1.5px solid var(--ink);
+  }
+
+  .gear-link:hover { background:var(--rose); border-color:var(--rose); }
+
+  .gear-tag {
+    position:absolute; top:12px; right:12px;
+    font-family:'Outfit',sans-serif; font-weight:300; font-size:14px;
+    letter-spacing:0.3em; text-transform:uppercase;
+    background:var(--light-pink); color:var(--ink);
+    padding:4px 10px;
+  }
+
+  /* ── FEATURED / WIDE CARD ── */
+  .gear-card-wide {
+    grid-column: span 3;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    gap:0;
+  }
+
+  .gear-card-wide .gear-icon {
+    height:100%;
+    min-height:200px;
+    font-size:80px;
+  }
+
+  .gear-card-wide .gear-content {
+    padding:32px 36px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+
+  .gear-card-wide .gear-brand { padding:0 0 4px; }
+  .gear-card-wide .gear-name { padding:0 0 10px; font-size:22px; }
+  .gear-card-wide .gear-desc { padding:0 0 20px; font-size:13px; }
+  .gear-card-wide .gear-link { margin:0; align-self:flex-start; }
+
+  /* ── FOOTER ── */
+  footer {
+    background:var(--ink); padding:48px 72px 32px;
+    display:flex; align-items:center; justify-content:space-between;
+    flex-wrap:wrap; gap:24px;
+  }
+
+  .footer-brand {
+    font-family:'Playfair Display',serif; font-size:18px; font-weight:400;
+    font-style:italic; letter-spacing:0.18em; color:var(--cream);
+  }
+
+  .footer-copy {
+    font-family:'Outfit',sans-serif; font-weight:200; font-size:10px;
+    letter-spacing:0.2em; color:rgba(248,243,237,0.3);
+  }
+
+  .footer-back {
+    font-family:'Outfit',sans-serif; font-weight:200; font-size:14px;
+    letter-spacing:0.28em; text-transform:uppercase;
+    color:rgba(248,243,237,0.4); text-decoration:none; transition:color 0.3s;
+  }
+  .footer-back:hover { color:var(--light-pink); }
+
+  @media (max-width: 900px) {
+    nav { padding:16px 24px; }
+    .hero { padding:120px 28px 60px; }
+    .gear-section { padding:60px 28px; }
+    .gear-grid { grid-template-columns:1fr 1fr; }
+    .gear-card-wide { grid-column:span 2; grid-template-columns:1fr; }
+    .gear-card-wide .gear-icon { min-height:140px; }
+    footer { padding:40px 28px 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="anne-clark-studio-website-v8.html" class="nav-logo">
+    <div class="nav-circle">
+      <div class="anne">Anne</div>
+      <div class="clark">Clark</div>
+      <div class="studio">studio</div>
+      <div class="nav-dot"></div>
+    </div>
+    <span class="nav-brand">Anne Clark Studio</span>
+  </a>
+  <a href="anne-clark-studio-website-v8.html" class="nav-back">← Back to Main Site</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">My Gear & Favorites</div>
+  <h1 class="hero-title">The tools behind<br><span>the work.</span></h1>
+  <p class="hero-body">These are the cameras, lenses, supplies and tools I actually use — the ones that come with me on every shoot, road trip, and creative session. Sharing them here because you asked, and because I believe in keeping it real.</p>
+  <p class="affiliate-note">✦ Some links below are Amazon affiliate links — I earn a small commission at no extra cost to you. I only share things I genuinely love and use. ✦</p>
+</div>
+
+<!-- CAMERAS -->
+<section class="gear-section" id="cameras">
+  <div class="section-eyebrow">Camera Bodies</div>
+  <div class="gold-rule"></div>
+  <h2 class="section-title">My <span>Cameras</span></h2>
+  <p class="section-body">I shoot with four different systems depending on what I'm capturing — from aerial landscapes to intimate portraits to action adventures. Each one has its place in my bag.</p>
+
+  <div class="gear-grid">
+
+    <!-- Nikon WIDE FEATURED -->
+    <div class="gear-card gear-card-wide">
+      <div class="gear-icon gear-icon-nikon">📷</div>
+      <div class="gear-content">
+        <div class="gear-brand">Nikon</div>
+        <div class="gear-name">Nikon D810 — My Primary Body</div>
+        <div class="gear-desc">This is my workhorse and honestly one of the greatest cameras ever made. The D810's 36.3MP full-frame sensor delivers breathtaking detail and dynamic range — whether I'm shooting golden hour landscapes, intimate family portraits, or fine art work destined for large canvas prints. The files are absolutely stunning and hold up beautifully at any print size. This camera has been with me through everything.</div>
+        <a href="https://www.amazon.com/s?k=Nikon+D810" target="_blank" class="gear-link">Shop on Amazon →</a>
+      </div>
+      <div class="gear-tag">My Favorite</div>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-nikon">📸</div>
+      <div class="gear-brand">Nikon</div>
+      <div class="gear-name">Nikon Z8</div>
+      <div class="gear-desc">When I need maximum resolution for large print work, the Z8's 45MP sensor is unmatched. Every fine art print in my shop starts with this camera. Flagship performance in a body that doesn't weigh a ton.</div>
+      <a href="https://www.amazon.com/s?k=Nikon+Z8+camera" target="_blank" class="gear-link">Shop on Amazon →</a>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-dji">🚁</div>
+      <div class="gear-brand">DJI</div>
+      <div class="gear-name">DJI Mavic 4 Pro</div>
+      <div class="gear-desc">My aerial photography game changer. The Mavic 4 Pro goes everywhere with me on road trips — from the Kansas plains to the Colorado Rockies. Those sweeping landscape shots you see in my shop? This is how I get them.</div>
+      <a href="https://www.amazon.com/s?k=DJI+Mavic+4+Pro" target="_blank" class="gear-link">Shop on Amazon →</a>
+      <div class="gear-tag">Travel Must</div>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-dji">📡</div>
+      <div class="gear-brand">DJI</div>
+      <div class="gear-name">DJI Mini 4 Pro</div>
+      <div class="gear-desc">When I need something ultralight and packable, the Mini 4 Pro comes out. Under 250g, omnidirectional obstacle sensing, and stunning 4K video. It goes places my bigger drone can't — and I love it for that.</div>
+      <a href="https://www.amazon.com/s?k=DJI+Mini+4+Pro" target="_blank" class="gear-link">Shop on Amazon →</a>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-gopro">🎬</div>
+      <div class="gear-brand">GoPro</div>
+      <div class="gear-name">GoPro Hero 13 Black</div>
+      <div class="gear-desc">For action, adventure, and those moments where you can't babysit a camera. Fully waterproof, insane stabilization, and the new modular lens system gives me creative options no other action cam can match. My travel companion for every adventure.</div>
+      <a href="https://www.amazon.com/s?k=GoPro+Hero+13+Black" target="_blank" class="gear-link">Shop on Amazon →</a>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-sony">🎥</div>
+      <div class="gear-brand">Sony</div>
+      <div class="gear-name">Sony ZV-E1</div>
+      <div class="gear-desc">My compact full-frame powerhouse. When I want incredible image quality in a small package — for coastal shoots, travel days, and street photography — this Sony delivers beyond its size. The vlog-friendly design doesn't hurt either.</div>
+      <a href="https://www.amazon.com/s?k=Sony+ZV-E1+camera" target="_blank" class="gear-link">Shop on Amazon →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- LENSES & ACCESSORIES -->
+<section class="gear-section" id="lenses">
+  <div class="section-eyebrow">Lenses & Accessories</div>
+  <div class="gold-rule"></div>
+  <h2 class="section-title">Lenses & <span>Essentials</span></h2>
+  <p class="section-body">The glass makes the image. Here are the lenses and accessories I reach for most — the ones that have earned a permanent spot in my bag.</p>
+
+  <div class="gear-grid">
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-lens">🔭</div>
+      <div class="gear-brand">Nikon Z</div>
+      <div class="gear-name">24-70mm f/2.8 S</div>
+      <div class="gear-desc">My desert island lens. Portraits, landscapes, family sessions — this zoom covers everything beautifully. The f/2.8 aperture gives me gorgeous background separation even in lower light situations.</div>
+      <a href="https://www.amazon.com/s?k=Nikon+Z+24-70mm+f2.8+S" target="_blank" class="gear-link">Shop on Amazon →</a>
+      <div class="gear-tag">Most Used</div>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-lens">🔍</div>
+      <div class="gear-brand">Nikon Z</div>
+      <div class="gear-name">85mm f/1.8 S Portrait Lens</div>
+      <div class="gear-desc">My portrait lens of choice. That creamy bokeh, the natural compression, the way it renders skin tones — this is the lens behind most of my family portrait work. Absolutely dreamy.</div>
+      <a href="https://www.amazon.com/s?k=Nikon+Z+85mm+f1.8+S" target="_blank" class="gear-link">Shop on Amazon →</a>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-lens">🌟</div>
+      <div class="gear-brand">Nikon</div>
+      <div class="gear-name">Nikon 35mm f/1.8G — My Favorite Lens</div>
+      <div class="gear-desc">This is the lens I reach for when I want to see the world the way my eyes do. The 35mm focal length is the most natural and immersive — perfect for street photography, lifestyle shots, travel, and environmental portraits. The f/1.8 aperture gives gorgeous light and beautiful bokeh at an incredibly accessible price. If I could only keep one lens, it would be this one.</div>
+      <a href="https://www.amazon.com/s?k=Nikon+35mm+f1.8G" target="_blank" class="gear-link">Shop on Amazon →</a>
+      <div class="gear-tag">My Fave!</div>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-tripod">📐</div>
+      <div class="gear-brand">Peak Design</div>
+      <div class="gear-name">Travel Tripod</div>
+      <div class="gear-desc">The most packable, sturdy, beautifully designed tripod I've ever used. It folds down to almost nothing but holds my heaviest Nikon setup with zero wobble. Worth every penny for travel photography.</div>
+      <a href="https://www.amazon.com/s?k=Peak+Design+Travel+Tripod" target="_blank" class="gear-link">Shop on Amazon →</a>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-bag">👜</div>
+      <div class="gear-brand">Peak Design</div>
+      <div class="gear-name">Everyday Camera Bag</div>
+      <div class="gear-desc">Holds everything — two bodies, multiple lenses, my iPad, snacks, and still looks like a stylish everyday bag. I take this on every shoot and every road trip. Game changing organization.</div>
+      <a href="https://www.amazon.com/s?k=Peak+Design+Everyday+Backpack" target="_blank" class="gear-link">Shop on Amazon →</a>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-lens">💾</div>
+      <div class="gear-brand">SanDisk</div>
+      <div class="gear-name">Extreme Pro SD Cards</div>
+      <div class="gear-desc">Fast, reliable, and I've never had one fail. I buy these in bulk and always have backups. Don't cheap out on memory cards — your images are worth more than saving $10.</div>
+      <a href="https://www.amazon.com/s?k=SanDisk+Extreme+Pro+SD+card" target="_blank" class="gear-link">Shop on Amazon →</a>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-lens">🔋</div>
+      <div class="gear-brand">Various</div>
+      <div class="gear-name">Extra Camera Batteries</div>
+      <div class="gear-desc">I never leave for a shoot without at least three charged batteries. Nothing worse than missing the shot because you ran out of power. These third-party options work perfectly and won't break the bank.</div>
+      <a href="https://www.amazon.com/s?k=Nikon+Z6+replacement+battery" target="_blank" class="gear-link">Shop on Amazon →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- EDITING -->
+<section class="gear-section" id="editing">
+  <div class="section-eyebrow">Editing & Software</div>
+  <div class="gold-rule"></div>
+  <h2 class="section-title">Edit Suite & <span>Software</span></h2>
+  <p class="section-body">Post-processing is where the magic gets refined. Here's what I use to bring my images from good to gallery-ready.</p>
+
+  <div class="gear-grid">
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-lr">💻</div>
+      <div class="gear-brand">Adobe</div>
+      <div class="gear-name">Lightroom Classic</div>
+      <div class="gear-desc">My primary editing home. Every single image I've ever delivered to a client or put in my shop has been through Lightroom. The catalog system, the masking tools, the color grading — nothing comes close for photographers.</div>
+      <a href="https://www.amazon.com/s?k=Adobe+Creative+Cloud+photography" target="_blank" class="gear-link">Shop on Amazon →</a>
+      <div class="gear-tag">Daily Driver</div>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-lr">🎨</div>
+      <div class="gear-brand">Adobe</div>
+      <div class="gear-name">Photoshop</div>
+      <div class="gear-desc">For the deeper composite work, fine art manipulation, and creating my abstract series. Photoshop is where images become art. I use it alongside Lightroom every single day.</div>
+      <a href="https://www.amazon.com/s?k=Adobe+Creative+Cloud" target="_blank" class="gear-link">Shop on Amazon →</a>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-art">🖥️</div>
+      <div class="gear-brand">LG / BenQ</div>
+      <div class="gear-name">Color Accurate Monitor</div>
+      <div class="gear-desc">You can't edit what you can't see accurately. A color-calibrated monitor is non-negotiable for print work — what you see on screen needs to match what comes off the printer. This changed my editing game completely.</div>
+      <a href="https://www.amazon.com/s?k=color+accurate+monitor+photography" target="_blank" class="gear-link">Shop on Amazon →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ART SUPPLIES -->
+<section class="gear-section" id="art">
+  <div class="section-eyebrow">Art & Studio</div>
+  <div class="gold-rule"></div>
+  <h2 class="section-title">Art Supplies & <span>Studio</span></h2>
+  <p class="section-body">When I'm not behind the camera I'm in the studio creating. These are the supplies I reach for to make the abstract and fine art work you see in my shop.</p>
+
+  <div class="gear-grid">
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-art">🎨</div>
+      <div class="gear-brand">Liquitex / Golden</div>
+      <div class="gear-name">Professional Acrylic Paints</div>
+      <div class="gear-desc">The colors in my abstract series start here. Professional grade acrylics give me the depth, vibrancy and archival quality that cheaper paints just can't deliver. Worth the investment for work you want to last.</div>
+      <a href="https://www.amazon.com/s?k=professional+acrylic+paint+set+artist" target="_blank" class="gear-link">Shop on Amazon →</a>
+      <div class="gear-tag">Studio Staple</div>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-canvas">🖼️</div>
+      <div class="gear-brand">Fredrix</div>
+      <div class="gear-name">Gallery Wrap Canvas</div>
+      <div class="gear-desc">The canvas my work lives on. Acid-free, archival quality, and the gallery wrap edges mean no framing required. I use these for both my painting work and as the base for photography prints.</div>
+      <a href="https://www.amazon.com/s?k=gallery+wrap+canvas+artist" target="_blank" class="gear-link">Shop on Amazon →</a>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-paper">📄</div>
+      <div class="gear-brand">Hahnemühle</div>
+      <div class="gear-name">Fine Art Photo Paper</div>
+      <div class="gear-desc">When I print at home for proofing or small runs, Hahnemühle is what I reach for. The texture, the weight, the way it holds color — it makes photographs feel like art. Museum quality in your hands.</div>
+      <a href="https://www.amazon.com/s?k=Hahnemuhle+fine+art+photo+paper" target="_blank" class="gear-link">Shop on Amazon →</a>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-frame">🖼️</div>
+      <div class="gear-brand">Larson-Juhl</div>
+      <div class="gear-name">Gallery Frames</div>
+      <div class="gear-desc">Framing can make or break a piece. I love simple, clean frames that let the art speak — not compete with it. These are the frames I recommend to clients who want the complete gallery look at home.</div>
+      <a href="https://www.amazon.com/s?k=gallery+frame+fine+art+print" target="_blank" class="gear-link">Shop on Amazon →</a>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-art">✏️</div>
+      <div class="gear-brand">Various</div>
+      <div class="gear-name">Artist Brushes Set</div>
+      <div class="gear-desc">Good brushes make a real difference. I use a mix of flat, fan, and detail brushes depending on the effect I'm going for. These sets give you everything you need from broad strokes to fine detail work.</div>
+      <a href="https://www.amazon.com/s?k=professional+artist+brush+set+acrylic" target="_blank" class="gear-link">Shop on Amazon →</a>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-art">🌟</div>
+      <div class="gear-brand">Studio Essentials</div>
+      <div class="gear-name">Palette, Easel & More</div>
+      <div class="gear-desc">The everyday studio essentials I can't work without — a good glass palette, a sturdy easel, palette knives, and plenty of good lighting. Everything you need to set up a real working studio space.</div>
+      <a href="https://www.amazon.com/s?k=artist+studio+essentials+set" target="_blank" class="gear-link">Shop on Amazon →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CANON SECTION -->
+<section class="gear-section" id="canon">
+  <div class="section-eyebrow">For Beginners</div>
+  <div class="gold-rule"></div>
+  <h2 class="section-title">Start Here — <span>Canon</span></h2>
+  <p class="section-body">If you're just getting started in photography, Canon is hands down the most beginner-friendly system out there. Intuitive menus, incredible image quality straight out of camera, and a massive lens selection. These are the cameras I recommend to anyone just starting their photography journey.</p>
+
+  <div class="gear-grid">
+
+    <div class="gear-card gear-card-wide">
+      <div class="gear-icon gear-icon-nikon" style="background:linear-gradient(145deg,#f0e8ec,#e8dce3);">📷</div>
+      <div class="gear-content">
+        <div class="gear-brand">Canon</div>
+        <div class="gear-name">Canon EOS Rebel SL3 — Best Beginner DSLR</div>
+        <div class="gear-desc">The lightest Canon DSLR ever made and the perfect first camera. The SL3 has a flip-out touchscreen, built-in Wi-Fi for easy phone transfer, guided shooting modes that teach you as you go, and produces genuinely beautiful images. If you're buying your first real camera and don't know where to start — start here. You'll grow into it for years and never feel limited.</div>
+        <a href="https://www.amazon.com/s?k=Canon+EOS+Rebel+SL3" target="_blank" class="gear-link">Shop on Amazon →</a>
+      </div>
+      <div class="gear-tag">Best for Beginners</div>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon" style="background:linear-gradient(145deg,#f0e8ec,#e8dce3); height:140px; display:flex; align-items:center; justify-content:center; font-size:64px;">📸</div>
+      <div class="gear-brand">Canon</div>
+      <div class="gear-name">Canon EOS M50 Mark II</div>
+      <div class="gear-desc">A mirrorless camera that's small enough to take everywhere but powerful enough to grow with you. Amazing for content creators, travel photographers, and anyone who wants great quality without the bulk of a DSLR. The autofocus is fast and the video quality is stunning.</div>
+      <a href="https://www.amazon.com/s?k=Canon+EOS+M50+Mark+II" target="_blank" class="gear-link">Shop on Amazon →</a>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-lens" style="background:linear-gradient(145deg,#f0e8ec,#e8dce3);">🔭</div>
+      <div class="gear-brand">Canon</div>
+      <div class="gear-name">Canon 50mm f/1.8 STM — "Nifty Fifty"</div>
+      <div class="gear-desc">The very first lens every beginner should own. Under $150, incredibly sharp, beautiful bokeh, and teaches you to see light the way professional photographers do. Every Canon shooter has owned this lens. It's a rite of passage and an absolute bargain.</div>
+      <a href="https://www.amazon.com/s?k=Canon+50mm+f1.8+STM" target="_blank" class="gear-link">Shop on Amazon →</a>
+      <div class="gear-tag">Under $150</div>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon" style="background:linear-gradient(145deg,#f0e8ec,#e8dce3); height:140px; display:flex; align-items:center; justify-content:center; font-size:64px;">🎒</div>
+      <div class="gear-brand">Canon</div>
+      <div class="gear-name">Canon EOS R50 — Best Mirrorless Beginner</div>
+      <div class="gear-desc">Canon's newest entry-level mirrorless and honestly one of the best beginner cameras ever made. Incredibly smart autofocus that tracks eyes, faces and subjects automatically — so you get sharp shots even when you're still learning. Compact, gorgeous, and future-proof.</div>
+      <a href="https://www.amazon.com/s?k=Canon+EOS+R50" target="_blank" class="gear-link">Shop on Amazon →</a>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon" style="background:linear-gradient(145deg,#f0e8ec,#e8dce3); height:140px; display:flex; align-items:center; justify-content:center; font-size:64px;">📦</div>
+      <div class="gear-brand">Canon</div>
+      <div class="gear-name">Beginner Camera Bag & Accessories Kit</div>
+      <div class="gear-desc">Once you have your first camera, you need the essentials — a good bag, extra batteries, quality SD cards, a lens cleaning kit, and a basic tripod. This kit covers everything you need to get started shooting confidently from day one.</div>
+      <a href="https://www.amazon.com/s?k=camera+bag+accessories+beginner+kit" target="_blank" class="gear-link">Shop on Amazon →</a>
+    </div>
+
+    <div class="gear-card">
+      <div class="gear-icon gear-icon-lr" style="background:linear-gradient(145deg,#f0e8ec,#e8dce3);">📱</div>
+      <div class="gear-brand">Adobe</div>
+      <div class="gear-name">Lightroom Mobile — Free to Start</div>
+      <div class="gear-desc">Before you invest in the full Adobe suite, start with Lightroom Mobile — it's free on your phone and incredibly powerful. Learn to edit, organize and export your photos here first. When you're ready to level up, the desktop version is waiting. This is where every great photographer starts their editing journey.</div>
+      <a href="https://www.amazon.com/s?k=Adobe+Lightroom+photography+plan" target="_blank" class="gear-link">Shop on Amazon →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Anne Clark Studio</div>
+  <div class="footer-copy">© 2026 Anne Clark Studio · Kansas City, Missouri</div>
+  <a href="anne-clark-studio-website-v8.html" class="footer-back">← Back to Main Site</a>
+</footer>
+
+</body>
+</html>

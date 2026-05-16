@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portrait Sessions — Anne Clark Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Great+Vibes&family=Outfit:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --cream:#F8F3ED;--warm-white:#FDFAF6;--ink:#1E2A24;
+  --sage:#9DBFAA;--gold:#C9A96E;--taupe:#B8A898;
+  --light-pink:#F2C4C4;--petal:#EBA8A8;--blush:#F7DADA;
+  --rose:#D4878B;--sage-deep:#5A8F73;
+}
+html{scroll-behavior:smooth}
+body{background:var(--warm-white);color:var(--ink);font-family:'Outfit',sans-serif;font-weight:300}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 52px;background:rgba(253,250,246,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(184,168,152,0.15)}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-circle{width:42px;height:42px;border-radius:50%;background:linear-gradient(145deg,#F2C4C4,#EBA8A8,#D4878B);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 3px 12px rgba(235,168,168,0.4);position:relative}
+.nav-circle .anne{font-family:'Playfair Display',serif;font-size:9px;font-weight:700;font-style:italic;color:#1E2A24;line-height:1}
+.nav-circle .clark{font-family:'Playfair Display',serif;font-size:9px;font-weight:700;font-style:italic;color:#1E2A24;line-height:1;margin-top:-1px}
+.nav-circle .studio{font-family:'Great Vibes',cursive;font-size:9px;color:rgba(30,42,36,0.6);line-height:1}
+.nav-dot{position:absolute;width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#EBA8A8,#D4878B);top:-1px;right:-1px;box-shadow:0 2px 6px rgba(235,168,168,0.55),0 0 0 1.5px rgba(255,255,255,0.6)}
+.nav-brand{font-family:'Playfair Display',serif;font-size:13px;font-weight:400;font-style:italic;letter-spacing:0.2em;color:var(--ink)}
+.nav-back{font-family:'Outfit',sans-serif;font-weight:300;font-size:13px;letter-spacing:0.25em;text-transform:uppercase;color:var(--taupe);text-decoration:none;transition:color 0.3s}
+.nav-back:hover{color:var(--ink)}
+
+/* HERO */
+.hero{padding:60px 72px 56px;background:linear-gradient(160deg,var(--blush),var(--light-pink),var(--petal));position:relative;overflow:hidden}
+.hero::before{content:'portraits';font-family:'Playfair Display',serif;font-size:160px;font-weight:900;font-style:italic;color:rgba(255,255,255,0.15);position:absolute;bottom:-20px;right:-10px;line-height:1;pointer-events:none;letter-spacing:-0.04em}
+.eyebrow{font-family:'Outfit',sans-serif;font-weight:300;font-size:14px;letter-spacing:0.45em;text-transform:uppercase;color:var(--rose);margin-bottom:14px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(40px,6vw,72px);font-weight:700;font-style:italic;color:var(--ink);line-height:1.05;margin-bottom:16px}
+.hero h1 span{color:rgba(30,42,36,0.4)}
+.hero p{font-family:'Outfit',sans-serif;font-weight:300;font-size:18px;line-height:1.9;color:rgba(30,42,36,0.65);max-width:560px}
+
+/* ── MINI SESSION BANNER ── */
+.mini-banner{
+  background:var(--ink); padding:48px 72px;
+  display:grid; grid-template-columns:1fr auto;
+  align-items:center; gap:40px;
+  position:relative; overflow:hidden;
+}
+.mini-banner::before{
+  content:'book now';
+  font-family:'Playfair Display',serif;
+  font-size:140px; font-weight:900; font-style:italic;
+  color:rgba(255,255,255,0.04);
+  position:absolute; right:-10px; bottom:-20px;
+  line-height:1; pointer-events:none;
+}
+.mini-tag{
+  font-family:'Outfit',sans-serif; font-weight:300;
+  font-size:14px; letter-spacing:0.45em; text-transform:uppercase;
+  color:var(--petal); margin-bottom:14px;
+}
+.mini-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(28px,4vw,48px); font-weight:700; font-style:italic;
+  color:var(--cream); line-height:1.1; margin-bottom:16px;
+}
+.mini-title span{color:var(--light-pink)}
+.mini-details{display:flex;gap:32px;flex-wrap:wrap;margin-bottom:20px}
+.mini-detail{display:flex;flex-direction:column;gap:4px}
+.mini-detail-val{
+  font-family:'Playfair Display',serif;
+  font-size:26px; font-weight:700; font-style:italic;
+  color:var(--light-pink); line-height:1;
+}
+.mini-detail-label{
+  font-family:'Outfit',sans-serif; font-weight:200;
+  font-size:12px; letter-spacing:0.35em; text-transform:uppercase;
+  color:rgba(248,243,237,0.45);
+}
+.mini-desc{
+  font-family:'Outfit',sans-serif; font-weight:300;
+  font-size:16px; line-height:1.85;
+  color:rgba(248,243,237,0.55); max-width:560px;
+}
+.mini-gold-rule{width:50px;height:2px;background:linear-gradient(90deg,var(--rose),var(--gold));margin-bottom:20px;border-radius:2px}
+.mini-cta-wrap{display:flex;flex-direction:column;gap:14px;align-items:center;flex-shrink:0}
+.btn-book{
+  font-family:'Outfit',sans-serif; font-weight:400;
+  font-size:13px; letter-spacing:0.3em; text-transform:uppercase;
+  color:var(--ink); background:var(--light-pink);
+  padding:18px 40px; text-decoration:none;
+  border:none; transition:all 0.3s; white-space:nowrap;
+  display:inline-block;
+}
+.btn-book:hover{background:var(--petal)}
+.mini-spots{
+  font-family:'Outfit',sans-serif; font-weight:300;
+  font-size:13px; letter-spacing:0.15em;
+  color:rgba(248,243,237,0.4); text-align:center;
+}
+
+/* GALLERY */
+.gallery-section{padding:72px 72px}
+.gallery-section:nth-child(even){background:var(--cream)}
+.gal-header{margin-bottom:44px}
+.gal-eyebrow{font-family:'Outfit',sans-serif;font-weight:300;font-size:14px;letter-spacing:0.45em;text-transform:uppercase;color:var(--rose);margin-bottom:14px}
+.gold-rule{width:50px;height:2px;background:linear-gradient(90deg,var(--rose),var(--gold));margin-bottom:20px;border-radius:2px}
+.gal-title{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,46px);font-weight:700;font-style:italic;color:var(--ink);line-height:1.1}
+.gal-title span{color:var(--sage-deep)}
+
+/* Photo blocks */
+.pblock{overflow:hidden;position:relative;cursor:pointer}
+.pblock img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;display:block}
+.pblock:hover img{transform:scale(1.04)}
+.pblock::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--light-pink),var(--gold));transform:scaleX(0);transition:transform 0.4s;transform-origin:left}
+.pblock:hover::after{transform:scaleX(1)}
+
+/* Row layouts */
+.row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:12px}
+.row-wide-2{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-bottom:12px}
+.row-2-wide{display:grid;grid-template-columns:1fr 2fr;gap:12px;margin-bottom:12px}
+.row-4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin-bottom:12px}
+.row-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+
+.tall img{aspect-ratio:4/5;object-fit:cover}
+.wide img{aspect-ratio:16/9;object-fit:cover}
+.square img{aspect-ratio:1;object-fit:cover}
+.portrait img{aspect-ratio:3/4;object-fit:cover}
+.landscape img{aspect-ratio:3/2;object-fit:cover}
+
+/* BOOKING SECTION */
+.booking-section{
+  padding:80px 72px;
+  background:linear-gradient(160deg,var(--blush),var(--light-pink),var(--petal));
+  position:relative;overflow:hidden;
+}
+.booking-section::before{
+  content:'hello';font-family:'Playfair Display',serif;
+  font-size:220px;font-weight:900;font-style:italic;
+  color:rgba(255,255,255,0.18);position:absolute;
+  bottom:-30px;right:-10px;line-height:1;pointer-events:none;
+}
+.booking-inner{max-width:620px;position:relative;z-index:1}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+.form-field{display:flex;flex-direction:column;gap:8px}
+.form-field.full{grid-column:span 2}
+.form-field label{font-family:'Outfit',sans-serif;font-weight:300;font-size:13px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(30,42,36,0.55)}
+.form-field input,.form-field select,.form-field textarea{
+  font-family:'Outfit',sans-serif;font-weight:300;font-size:15px;
+  color:var(--ink);background:rgba(255,255,255,0.7);
+  border:1px solid rgba(184,168,152,0.3);padding:14px 18px;
+  outline:none;transition:all 0.3s;backdrop-filter:blur(6px);
+  -webkit-appearance:none;
+}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{background:rgba(255,255,255,0.95);border-color:var(--rose)}
+.form-field textarea{resize:vertical;min-height:110px}
+.btn-submit{
+  font-family:'Outfit',sans-serif;font-weight:400;font-size:13px;
+  letter-spacing:0.3em;text-transform:uppercase;
+  color:var(--warm-white);background:var(--ink);
+  border:none;padding:18px 44px;cursor:pointer;
+  transition:all 0.3s;align-self:flex-start;
+  border:1.5px solid var(--ink);margin-top:8px;
+}
+.btn-submit:hover{background:var(--rose);border-color:var(--rose)}
+
+/* FOOTER */
+footer{background:var(--ink);padding:40px 72px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.footer-brand{font-family:'Playfair Display',serif;font-size:17px;font-weight:400;font-style:italic;letter-spacing:0.18em;color:var(--cream)}
+.footer-copy{font-family:'Outfit',sans-serif;font-weight:200;font-size:12px;letter-spacing:0.2em;color:rgba(248,243,237,0.3)}
+.footer-back{font-family:'Outfit',sans-serif;font-weight:300;font-size:12px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(248,243,237,0.4);text-decoration:none;transition:color 0.3s}
+.footer-back:hover{color:var(--light-pink)}
+
+@media(max-width:900px){
+  nav{padding:14px 24px}
+  .hero,.gallery-section,.booking-section,.mini-banner{padding:50px 28px}
+  .row-3,.row-wide-2,.row-2-wide,.row-4{grid-template-columns:1fr 1fr}
+  .row-4{grid-template-columns:1fr 1fr}
+  .mini-banner{grid-template-columns:1fr}
+  footer{padding:36px 28px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-circle">
+      <div class="anne">Anne</div><div class="clark">Clark</div><div class="studio">studio</div>
+      <div class="nav-dot"></div>
+    </div>
+    <span class="nav-brand">Anne Clark Studio</span>
+  </a>
+  <a href="index.html" class="nav-back">← Back to Main Site</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="eyebrow">Portrait Sessions</div>
+  <h1>Life looks <span>beautiful</span><br>through my lens.</h1>
+  <p>On-location, natural light portrait sessions throughout the Kansas City area. Babies, children, seniors, families, maternity — and yes, pets absolutely welcome!</p>
+</div>
+
+<!-- ── NOW BOOKING MINI SESSION BANNER ── -->
+<div class="mini-banner">
+  <div>
+    <div class="mini-tag">✦ Now Booking · Limited Spots Available ✦</div>
+    <div class="mini-gold-rule"></div>
+    <div class="mini-title">Summer 2026 <span>Mini Sessions</span></div>
+    <div class="mini-details">
+      <div class="mini-detail">
+        <div class="mini-detail-val">$300</div>
+        <div class="mini-detail-label">Session Fee</div>
+      </div>
+      <div class="mini-detail">
+        <div class="mini-detail-val">20 min</div>
+        <div class="mini-detail-label">Session Length</div>
+      </div>
+      <div class="mini-detail">
+        <div class="mini-detail-val">15</div>
+        <div class="mini-detail-label">Edited Images</div>
+      </div>
+      <div class="mini-detail">
+        <div class="mini-detail-val">KC</div>
+        <div class="mini-detail-label">Area Locations</div>
+      </div>
+    </div>
+    <p class="mini-desc">Perfect for families, babies, seniors and anyone who wants beautiful images without a full session commitment. You'll receive 15 professionally edited digital images delivered via your private Pixieset gallery — ready to download, print and treasure forever.</p>
+  </div>
+  <div class="mini-cta-wrap">
+    <a href="#book" class="btn-book">Book Your Mini →</a>
+    <div class="mini-spots">Summer spots filling fast!</div>
+  </div>
+</div>
+
+<!-- GALLERY ROW 1 — full families -->
+<section class="gallery-section">
+  <div class="gal-header">
+    <div class="gal-eyebrow">Families</div>
+    <div class="gold-rule"></div>
+    <h2 class="gal-title">Family <span>Sessions</span></h2>
+  </div>
+
+  <div class="row-wide-2">
+    <div class="pblock tall"><img src="data:image/jpeg;base64," loading="lazy"/></div>
+    <div class="pblock tall"><img src="data:image/jpeg;base64," loading="lazy"/></div>
+  </div>
+  <div class="row-3">
+    <div class="pblock portrait"><img src="data:image/jpeg;base64," loading="lazy"/></div>
+    <div class="pblock portrait"><img src="data:image/jpeg;base64," loading="lazy"/></div>
+    <div class="pblock portrait"><img src="data:image/jpeg;base64," loading="lazy"/></div>
+  </div>
+</section>
+
+<!-- GALLERY ROW 2 — babies & children -->
+<section class="gallery-section">
+  <div class="gal-header">
+    <div class="gal-eyebrow">Babies & Children</div>
+    <div class="gold-rule"></div>
+    <h2 class="gal-title">Little <span>Ones</span></h2>
+  </div>
+
+  <div class="row-3">
+    <div class="pblock portrait"><img src="data:image/jpeg;base64," loading="lazy"/></div>
+    <div class="pblock portrait"><img src="data:image/jpeg;base64," loading="lazy"/></div>
+    <div class="pblock portrait"><img src="data:image/jpeg;base64," loading="lazy"/></div>
+  </div>
+  <div class="row-2">
+    <div class="pblock landscape"><img src="data:image/jpeg;base64," loading="lazy"/></div>
+    <div class="pblock landscape"><img src="data:image/jpeg;base64," loading="lazy"/></div>
+  </div>
+</section>
+
+<!-- GALLERY ROW 3 — seniors & individuals -->
+<section class="gallery-section">
+  <div class="gal-header">
+    <div class="gal-eyebrow">Seniors & Individuals</div>
+    <div class="gold-rule"></div>
+    <h2 class="gal-title">Senior <span>Portraits</span></h2>
+  </div>
+
+  <div class="row-4">
+    <div class="pblock portrait"><img src="data:image/jpeg;base64," loading="lazy"/></div>
+    <div class="pblock portrait"><img src="data:image/jpeg;base64," loading="lazy"/></div>
+    <div class="pblock portrait"><img src="data:image/jpeg;base64," loading="lazy"/></div>
+    <div class="pblock portrait"><img src="data:image/jpeg;base64," loading="lazy"/></div>
+  </div>
+  <div class="row-wide-2">
+    <div class="pblock landscape"><img src="data:image/jpeg;base64," loading="lazy"/></div>
+  </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="booking-section" id="book">
+  <div class="booking-inner">
+    <div class="eyebrow">Book a Session</div>
+    <div class="gold-rule"></div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,48px);font-weight:700;font-style:italic;color:var(--ink);line-height:1.1;margin-bottom:16px;">Let's create something <span style="color:rgba(30,42,36,0.45);">beautiful.</span></h2>
+    <p style="font-family:'Outfit',sans-serif;font-weight:300;font-size:17px;line-height:1.9;color:rgba(30,42,36,0.6);">Whether it's a Summer Mini or a full session — I'd love to capture your family. Fill out the form below and I'll be in touch within 24 hours!</p>
+
+    <div class="form-grid">
+      <div class="form-field">
+        <label>First Name</label>
+        <input type="text" placeholder="Jane"/>
+      </div>
+      <div class="form-field">
+        <label>Last Name</label>
+        <input type="text" placeholder="Smith"/>
+      </div>
+      <div class="form-field">
+        <label>Email</label>
+        <input type="email" placeholder="jane@email.com"/>
+      </div>
+      <div class="form-field">
+        <label>Phone</label>
+        <input type="tel" placeholder="(816) 555-0000"/>
+      </div>
+      <div class="form-field full">
+        <label>Session Type</label>
+        <select>
+          <option>Summer Mini Session — $300 · 20 min · 15 images</option>
+          <option>Full Family Session</option>
+          <option>Maternity Session</option>
+          <option>Newborn & Baby Session</option>
+          <option>Senior Portraits</option>
+          <option>Something Else</option>
+        </select>
+      </div>
+      <div class="form-field full">
+        <label>Tell me about your family!</label>
+        <textarea placeholder="How many people, ages of kids, any furry friends joining? Preferred dates or locations? I'd love to know!"></textarea>
+      </div>
+      <button class="btn-submit">Send Inquiry →</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">Anne Clark Studio</div>
+  <div class="footer-copy">© 2026 Anne Clark Studio · Kansas City, Missouri</div>
+  <a href="index.html" class="footer-back">← Back to Main Site</a>
+</footer>
+
+</body>
+</html>
