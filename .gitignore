@@ -1,0 +1,22 @@
+# Claude Code local files
+CLAUDE.md
+.claude/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
+*.swo
+
+# Local research and working files
+research/
+samples/
+
+# Documentation (contains credentials — never push)
+docs/
+
+# Duplicate/versioned HTML files (parenthesized copies)
+*\ (*).html
